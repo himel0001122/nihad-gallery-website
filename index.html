@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>নিহাদ এর আব্বু দের ছবি</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #1a237e;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #3949ab;
+      color: #fff;
+      font-size: 1.3rem;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(57, 73, 171, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #283593;
+      box-shadow: 0 8px 16px rgba(40, 53, 147, 0.6);
+    }
+
+    .gallery {
+      display: none;
+      width: 100%;
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive text size */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>নিহাদ এর আব্বু দের ছবি</h1>
+
+  <button onclick="showImages()">ছবি দেখাও</button>
+
+  <div class="gallery" id="gallery">
+    <img src="pic01.jpg" alt="ছবি ১" />
+    <img src="pic02.jpg" alt="ছবি ২" />
+    <img src="pic03.jpg" alt="ছবি ৩" />
+  </div>
+
+  <script>
+    function showImages() {
+      const gallery = document.getElementById('gallery');
+      if (gallery.style.display === 'grid') {
+        gallery.style.display = 'none';
+      } else {
+        gallery.style.display = 'grid';
+      }
+    }
+  </script>
+
+</body>
+</html>
